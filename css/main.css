@@ -1,0 +1,306 @@
+main {
+  width: 100vw;
+}
+
+.nav-buttons {
+  position: fixed;
+  z-index: 1;
+  color: var(--white);
+}
+
+.top-left {
+  top: var(--mobile-nav-buttons-top);
+  left: var(--mobile-nav-buttons-LR-top);
+}
+.top-right {
+  top: var(--mobile-nav-buttons-top);
+  right: var(--mobile-nav-buttons-LR-top);
+}
+.bottom-left {
+  bottom: var(--mobile-nav-buttons-bottom);
+  left: var(--mobile-nav-buttons-LR-bottom);
+}
+.bottom-right {
+  bottom: var(--mobile-nav-buttons-bottom);
+  right: var(--mobile-nav-buttons-LR-bottom);
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.main-top-section {
+  width: 100%;
+  height: 100vh;
+  /*http://www.justviral.net/wp-content/uploads/2016/11/Lake-Louise-Banff-National-Park-Alberta-Canada.jpg*/
+  background-image: url("../img/banff.jpg");
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-title {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 2rem; /*MOBILE VIEW (3rem fullscreen)*/
+  letter-spacing: 5px;
+
+  width: 100%;
+  position: absolute;
+  top:350px;
+}
+
+.long-line {
+  height: 2px;
+  background-color: var(--white);
+  width: 20%;
+  position: absolute;
+  top:50%;
+  display: none; /*MOBILE VIEW*/
+}
+
+.scroll-note {
+  align-self:flex-end;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+.info-section {
+  background-color: var(--medium-black);
+  width: 100%;
+  height: 100vh; /*MOBILE VIEW (140 tablet, 180 fullscreen)*/
+
+  position: relative;
+}
+
+.info-text {
+  text-align: left;
+  z-index: 1;
+  font-size: 0.85rem; /*MOBILE VIEW (1.5rem table, fullscreen)*/
+  width: 300px; /*MOBILE VIEW (400 tablet, 450 fullscreen)*/
+
+  position: absolute;
+  top: 20vh; /*MOBILE VIEW (35vh table, fullscreen)*/
+}
+
+.info-text p {
+  padding: 15px 0 0 0;
+}
+
+.info-section-photo {
+  width: 450px; /*TABLET VIEW (500 fullscreen)*/
+  position: absolute;
+  top: 70vh;
+  left: 10%;
+
+  display: none; /*MOBILE VIEW*/
+}
+
+.explore-section {
+  background-color: var(--medium-black);
+  width: 100%;
+  height: 200vh; /*MOBILE VIEW (140 tablet, 180 fullscreen)*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-section-title {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 2rem; /*MOBILE VIEW (3rem fullscreen)*/
+  letter-spacing: 5px;
+
+  width: 100%;
+}
+
+.explore-photo-container {
+  position: relative;
+  width: 100%;
+  height: 630px;
+}
+
+.explore-section-photo {
+  width: 150px; /*MOBILE VIEW (300 tablet, fullscreen)*/
+  position: absolute;
+}
+
+.pic-1 {
+  left: 5%; /*MOBILE VIEW (15% mobile portrait, tablet, fullscreen)*/
+  top: 0;
+}
+.pic-2 {
+  right: 5%; /*MOBILE VIEW (15% mobile portrait, tablet, fullscreen)*/
+  top: 15px;
+}
+.pic-3 {
+  left: 5%; /*MOBILE VIEW (15% mobile portrait, tablet, fullscreen)*/
+  bottom: 15px;
+}
+.pic-4 {
+  right: 5%; /*MOBILE VIEW (15% mobile portrait, tablet, fullscreen)*/
+  bottom: 0;
+}
+
+.footer-section {
+  background-color: var(--medium-black);
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer-section ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-end;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+/*MOBILE PORTRAIT VIEW*/
+@media(min-width: 450px) {
+  .pic-1 {
+    left: 15%;
+    top: 0;
+  }
+  .pic-2 {
+    right: 15%;
+    top: 15px;
+  }
+  .pic-3 {
+    left: 15%;
+    bottom: 15px;
+  }
+  .pic-4 {
+    right: 15%;
+    bottom: 0;
+  }
+}
+
+/*TABLET VIEW*/
+@media(min-width: 770px) {
+  .info-section {
+    height: 140vh;
+  }
+  .info-text {
+    width: 450px;
+    font-size: 1.25rem;
+    top: 35vh;
+    left: 40vw;
+  }
+  .long-line {
+    display: block;
+  }
+  .info-section-photo {
+    display: block;
+  }
+
+  .explore-section
+
+  .top-left {
+    top: var(--tablet-nav-buttons-top-bottom);
+    left: var(--tablet-nav-buttons-LR);
+  }
+  .top-right {
+    top: var(--tablet-nav-buttons-top-bottom);
+    right: var(--tablet-nav-buttons-LR);
+  }
+  .bottom-left {
+    bottom: var(--tablet-nav-buttons-top-bottom);
+    left: var(--tablet-nav-buttons-LR);
+  }
+  .bottom-right {
+    bottom: var(--tablet-nav-buttons-top-bottom);
+    right: var(--tablet-nav-buttons-LR);
+  }
+
+}
+
+@media(min-width:820px) {
+  .explore-photo-container {
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .explore-section-photo {
+    width: 200px;
+    height: 450px;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .pic-1,
+  .pic-3 {
+    align-self: flex-start;
+  }
+
+  .pic-2,
+  .pic-4 {
+    align-self: flex-end;
+  }
+
+  /*.pic-1 {
+    left: 10%;
+    top: 0;
+  }
+  .pic-2 {
+    right: 10%;
+    top: 15px;
+  }
+  .pic-3 {
+    left: 10%;
+    bottom: 15px;
+  }
+  .pic-4 {
+    right: 10%;
+    bottom: 0;
+  }*/
+}
+
+/*FULLSCREEN VIEW*/
+@media(min-width:990px) {
+  .info-section {
+    height: 160vh;
+  }
+  .info-section-photo {
+    width: 500px;
+  }
+  .info-text {
+    width: 600px;
+    left: 45vw;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+  .info-section-photo {
+    width: 600px;
+  }
+
+  .top-left {
+    left: var(--fullscreen-nav-buttons-LR);
+  }
+  .top-right {
+    right: var(--fullscreen-nav-buttons-LR);
+  }
+  .bottom-left {
+    left: var(--fullscreen-nav-buttons-LR);
+  }
+  .bottom-right {
+    right: var(--fullscreen-nav-buttons-LR);
+  }
+}

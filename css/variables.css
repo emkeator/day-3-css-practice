@@ -1,0 +1,63 @@
+/*Import your fonts at the top*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:300,700');
+
+:root {
+
+    /*Base Website colors*/
+
+    /*Primary colors*/
+    --black:#000000;
+    --medium-black:#1D1E20;
+    --dark-gray: #48484C;
+    --light-gray: #A0A0A0;
+    --white:#ffffff;
+
+
+    /*Define grid stuff here for both mobile and desktop */
+    /*Grids*/
+    /*--mobile-grid-column-gap:20px;
+    --mobile-grid-row-gap:20px;*/
+
+    /*fonts*/
+    --primary-font: 'Oswald', sans-serif;
+    --secondary-font: 'Roboto Condensed', sans-serif;
+
+    /*Here we can start setting up our base margins and padding that we'll use throughout the website*/
+    /*This is really important because it will keep everything tight and aligned consistently */
+
+    /*Layout*/
+    --mobile-nav-buttons-top: 12.5px;
+    --mobile-nav-buttons-bottom: 25px;
+    --mobile-nav-buttons-LR-top: 12.5px;
+    --mobile-nav-buttons-LR-bottom: 50px;
+
+    --tablet-nav-buttons-top-bottom: 25px;
+    --tablet-nav-buttons-LR: 25px;
+
+    --fullscreen-nav-buttons-LR: 50px;
+
+    --fullscreen-title-font-size: 72px;
+
+    --breakpoint-to-fullscreen: 990px;
+    --breakpoint-to-tablet: 770px;
+}
+
+html, body
+{
+    /*Add primary font to the html and body so that every element you that needs it can just inherit it*/
+    font-family: var(--secondary-font);
+    letter-spacing: 3px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+/*Remove ugly default border and background from buttons*/
+button {
+    border:none;
+    background: none;
+}
+
+/*Remove gross default  blue/orange outline on button click */
+button:focus {
+    outline: none;
+}
